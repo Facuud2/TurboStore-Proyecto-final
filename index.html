@@ -1,70 +1,157 @@
 <!DOCTYPE html>
+<!-- Indica al navegador que este es un documento HTML5 -->
 <html lang="en">
-<head>
+  <!-- La etiqueta <html> envuelve todo el contenido de la página. El atributo lang="en" define el idioma principal (inglés) -->
+  <head>
+    <!-- La cabecera del documento contiene metadatos y enlaces a recursos externos (como hojas de estilo) -->
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres, permitiendo el uso correcto de acentos y símbolos especiales -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página se ajuste al ancho del dispositivo, lo que es esencial para el diseño responsivo -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Vincula la hoja de estilo externa que se utilizará para diseñar la apariencia visual de la página -->
     <title>Home - TurboStore</title>
-</head>
-<body>
+    <!-- Define el título de la página que se muestra en la pestaña del navegador -->
+  </head>
+  <body>
+    <!-- El cuerpo del documento contiene todo el contenido visible de la página -->
+
+    <!-- =============================== -->
+    <!-- Encabezado (Header) del sitio -->
+    <!-- =============================== -->
     <header>
-        <a href="#" style="text-decoration: none;"><p>Turbo<span>Store</span></p></a>
-        
-        <nav>
-            <ul>
-                <li class="list-item"><a href="#">Home</a></li>
-                <li class="list-item"><a href="#">Shop</a></li>
-                <li class="list-item"><a href="#">About Us</a></li>
-            </ul>
-        </nav>
+      <!-- El encabezado generalmente contiene el logotipo y la navegación principal -->
+      <a href="#" style="text-decoration: none;">
+        <!-- Enlace que usualmente redirige a la página de inicio. Se elimina la decoración para un estilo limpio -->
+        <p>
+          <!-- Se utiliza <p> para agrupar el nombre de la tienda. Se pueden aplicar estilos para resaltar partes del texto -->
+          Turbo<span>Store</span>
+          <!-- El uso de <span> permite aplicar estilos específicos a la palabra "Store" sin afectar al resto del texto -->
+        </p>
+      </a>
+      
+      <!-- Menú de navegación principal -->
+      <nav>
+        <!-- La etiqueta <nav> indica que el contenido es un conjunto de enlaces de navegación -->
+        <ul>
+          <!-- Lista desordenada para organizar los elementos del menú -->
+          <li class="list-item">
+            <!-- Cada <li> representa un elemento del menú. La clase "list-item" facilita la aplicación de estilos comunes -->
+            <a href="#">Home</a>
+            <!-- Enlace a la página de inicio -->
+          </li>
+          <li class="list-item">
+            <a href="#">Shop</a>
+            <!-- Enlace a la sección de tienda o productos -->
+          </li>
+          <li class="list-item">
+            <a href="#">About Us</a>
+            <!-- Enlace a la sección "Acerca de nosotros", que explica la identidad y valores de la empresa -->
+          </li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- =============================== -->
+    <!-- Sección principal 1: Destacados de la tienda -->
+    <!-- =============================== -->
     <section class="main_section_one">
-        <div class="main_section_col">
-            <img src="img/piggybank.jpg" alt="">
-            <h2>Precio competitivo</h2>
-            <p>Contamos con excelentes precios competitivos y economicos para aquellos que buscan un buen servicio por un bajo costo</p>
-        </div>
-        <div class="main_section_col">
-            <img src="img/calidad.jpg" alt="">
-            <h2>Calidad asegurada</h2>
-            <p>Te aseguramos que te ofreceremos una excelente calidad en cada uno de nuestros servicios y productos manteniendo la elegancia y el trabajo limpio</p>
-        </div>
-        <div class="main_section_col">
-            <img src="img/rapidodespacho.jpg" alt="">
-            <h2>Rapido despacho</h2>
-            <p>Sabemos que en la actualidad a veces se requiere de tener hechos los trabajos lo mas rapido posible, por lo que le aseguraremos que el trabajo sea realizado correctamente en el menor tiempo posible para que usted deposite su confianza total en nosotros</p>
-        </div>
-    </section>
-    <section class="main_section_two">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQeL6zoMoMNAFscSykwF8PhUM-wQ9wIJrQzOe_vKqEZa9yXL4cqE6SIxOxcTmmdSZLUn0c5hsrRHHjTcNO2egFkNg" alt="" width="350px" height="350px">
-        <div class="main_section_col-phrase">
-            <p>“Cuando lo dices, es marketing. Cuando tu cliente lo dice, es una prueba social".</p>
-            <p>- Andy Crestonida.</p>
-        </div>
-    </section>
-    <section class="main_section_three">
-        <div class="main_section_col-about">
-            <p>¿Quienes somos?</p>
-            <p>Estamos en la industria desde hace 10 años, contamos con una amplia variedad de productos para que puedas satisfacer tus necesidades. Por eso nos dedicamos a la venta de todo tipo de productos, trabajamos con profesionales de todo el mundo y mas de 10 marcas mundialmente reconocidas tanto de productos como financieras de servicios</p>
-            <p>¡Estamos aqui para ti!</p>
-        </div>
-        <aside>
-            <form action="">
-                <h2>Suscribete a nuestro newsletter!</h2>
-                <label for="name">Nombre: </label>
-                <input type="text" name="name" id="name">
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email">
-                <input type="button" value="Enviar">
-            </form>
-        </aside>
+      <!-- Sección que agrupa contenido relacionado, en este caso, los puntos fuertes de la tienda -->
+      
+      <!-- Columna para "Precio competitivo" -->
+      <div class="main_section_col">
+        <!-- <div> se usa para agrupar elementos y aplicarles estilos de bloque -->
+        <img src="img/piggybank.jpg" alt="">
+        <!-- Imagen representativa; el atributo alt debería completarse con una descripción para accesibilidad -->
+        <h2>Precio competitivo</h2>
+        <!-- Encabezado que resalta el concepto principal de esta columna -->
+        <p>
+          Contamos con excelentes precios competitivos y económicos para aquellos que buscan un buen servicio por un bajo costo
+        </p>
+        <!-- Párrafo descriptivo que explica el beneficio de precios competitivos -->
+      </div>
+
+      <!-- Columna para "Calidad asegurada" -->
+      <div class="main_section_col">
+        <img src="img/calidad.jpg" alt="">
+        <h2>Calidad asegurada</h2>
+        <p>
+          Te aseguramos que te ofreceremos una excelente calidad en cada uno de nuestros servicios y productos, manteniendo la elegancia y un trabajo limpio.
+        </p>
+      </div>
+
+      <!-- Columna para "Rápido despacho" -->
+      <div class="main_section_col">
+        <img src="img/rapidodespacho.jpg" alt="">
+        <h2>Rápido despacho</h2>
+        <p>
+          Sabemos que en la actualidad se requiere tener los trabajos listos lo más rápido posible, por lo que garantizamos que se realicen correctamente en el menor tiempo, generando total confianza en nuestros clientes.
+        </p>
+      </div>
     </section>
 
+    <!-- =============================== -->
+    <!-- Sección principal 2: Frase destacada y visual -->
+    <!-- =============================== -->
+    <section class="main_section_two">
+      <!-- Esta sección combina una imagen impactante con una frase inspiradora, reforzando el mensaje de la marca -->
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQeL6zoMoMNAFscSykwF8PhUM-wQ9wIJrQzOe_vKqEZa9yXL4cqE6SIxOxcTmmdSZLUn0c5hsrRHHjTcNO2egFkNg" alt="" width="350px" height="350px">
+      <!-- La imagen se dimensiona para encajar armoniosamente en el diseño -->
+      <div class="main_section_col-phrase">
+        <!-- Contenedor para la frase, que se puede estilizar para destacar visualmente -->
+        <p>
+          “Cuando lo dices, es marketing. Cuando tu cliente lo dice, es una prueba social".
+        </p>
+        <p>
+          - Andy Crestonida.
+        </p>
+      </div>
+    </section>
+
+    <!-- =============================== -->
+    <!-- Sección principal 3: Información sobre la empresa y suscripción -->
+    <!-- =============================== -->
+    <section class="main_section_three">
+      <!-- Se divide en dos partes: descripción sobre quiénes somos y un formulario de suscripción -->
+      
+      <!-- Columna "¿Quiénes somos?" -->
+      <div class="main_section_col-about">
+        <!-- Proporciona información sobre la empresa para generar confianza en los visitantes -->
+        <p>¿Quiénes somos?</p>
+        <p>
+          Estamos en la industria desde hace 10 años, contamos con una amplia variedad de productos para satisfacer tus necesidades. Nos dedicamos a la venta de todo tipo de productos, colaboramos con profesionales de todo el mundo y trabajamos con más de 10 marcas reconocidas globalmente, tanto de productos como de servicios financieros.
+        </p>
+        <p>¡Estamos aquí para ti!</p>
+      </div>
+
+      <!-- Barra lateral (Aside) para el formulario de suscripción -->
+      <aside>
+        <!-- La etiqueta <aside> se usa para contenido complementario o relacionado, como este formulario -->
+        <form action="">
+          <!-- Formulario para que los usuarios se suscriban al newsletter, importante para mantener el contacto con clientes -->
+          <h2>Suscríbete a nuestro newsletter!</h2>
+          <!-- Título del formulario para captar la atención del usuario -->
+          <label for="name">Nombre: </label>
+          <!-- La etiqueta <label> mejora la accesibilidad al asociar el texto al campo de entrada -->
+          <input type="text" name="name" id="name">
+          <!-- Campo de entrada para el nombre del usuario -->
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email">
+          <!-- Campo de entrada para el correo electrónico, importante para envíos de newsletter -->
+          <input type="button" value="Enviar">
+          <!-- Botón para enviar la información. Posteriormente, se podría modificar para que envíe los datos -->
+        </form>
+      </aside>
+    </section>
+
+    <!-- =============================== -->
+    <!-- Pie de página (Footer) -->
+    <!-- =============================== -->
     <footer>
-        <p> © Copyright 2018 - 2025</p>
-        <p>Todos los derechos reservados</p>
+      <!-- El pie de página contiene información legal y de derechos de autor -->
+      <p> © Copyright 2018 - 2025</p>
+      <p>Todos los derechos reservados</p>
     </footer>
 
-</body>
+  </body>
 </html>

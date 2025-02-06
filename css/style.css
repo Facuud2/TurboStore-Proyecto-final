@@ -1,191 +1,290 @@
 /* 
-
-Primary color: #52D1DC;
-Secondary Color: #475B5A;
-Tertiary Color: #83BCA9;
-Accent Color: #8D8E8E;
+   Paleta de colores utilizada en el diseño:
+   - Primary color: #52D1DC; (Color principal, usado para encabezados y fondos importantes)
+   - Secondary Color: #475B5A; (Color secundario, usado para textos y elementos complementarios)
+   - Tertiary Color: #83BCA9; (Color terciario, aporta variación y equilibrio)
+   - Accent Color: #8D8E8E; (Color de acento, para detalles y resaltar elementos)
 */
 
+/* 
+   Selector universal: 
+   Aplica las reglas a todos los elementos de la página.
+   Se eliminan márgenes y rellenos (padding) predeterminados para evitar inconsistencias.
+   Se utiliza box-sizing: border-box para incluir padding y border en el ancho y alto total del elemento.
+   Se define una familia tipográfica básica para toda la web.
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;              /* Elimina el margen por defecto en todos los elementos */
+    padding: 0;             /* Elimina el padding por defecto en todos los elementos */
+    box-sizing: border-box; /* Asegura que padding y borde se incluyan en las dimensiones del elemento */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente de texto principal */
 }
 
+/* 
+   Estilo para el cuerpo del documento.
+   Se define un color de fondo general para toda la página.
+*/
 body {
-    background-color: #a3a9aa;
+    background-color: #a3a9aa;  /* Color de fondo gris claro para la página */
 }
 
+/* 
+   Estilo para el encabezado (header) del sitio.
+   Se utiliza un fondo con el color primario y se emplea flexbox para distribuir el contenido.
+*/
 header {
-    background: #52D1DC;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    background: #52D1DC;           /* Fondo con el color principal */
+    display: flex;                 /* Se utiliza flexbox para organizar los elementos internos */
+    flex-flow: row nowrap;         /* Los elementos se organizan en una fila, sin envolver */
+    justify-content: space-between;/* Se distribuyen con espacio entre ellos (por ejemplo, logo y menú) */
 }
 
+/* 
+   Estilos para el párrafo dentro del header.
+   Se usa para mostrar el nombre o logotipo de la tienda con un tamaño grande y centrado.
+*/
 header p {
-    font-size: 3rem;
-    text-align: center;
-    color: #475b5a;
+    font-size: 3rem;       /* Tamaño de fuente grande para destacar el logo o nombre */
+    text-align: center;    /* Texto centrado */
+    color: #475b5a;        /* Color secundario para el texto */
 }
 
+/* 
+   Estilos para el <span> dentro del header.
+   Permite resaltar parte del texto (como "Store" en "TurboStore") con un color diferente.
+*/
 header span {
-    color: firebrick;
-    line-height: 105px;
+    color: firebrick;      /* Color rojo ladrillo para resaltar */
+    line-height: 105px;     /* Altura de línea que ayuda a alinear el texto verticalmente */
 }
 
+/* 
+   Estilo para la lista de navegación (<ul>).
+   Se utiliza flexbox para alinear los elementos de la lista horizontalmente.
+*/
 ul {
-    width: 100%;
-    height: 105px;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
+    width: 100%;                   /* Ocupa todo el ancho disponible */
+    height: 105px;                 /* Altura fija para que coincida con el header */
+    display: flex;                /* Organiza los elementos en una fila */
+    flex-flow: row;               /* Alinea los elementos en fila */
+    justify-content: flex-end;    /* Alinea los elementos al final (a la derecha) */
+    align-items: center;          /* Centra verticalmente los elementos */
+    list-style-type: none;        /* Elimina los puntos o numeración de la lista */
 }
 
+/* 
+   Estilo para cada elemento de la lista (li) con clase "list-item".
+   Se define el espaciado y se añade una transición para efectos visuales al interactuar.
+*/
 .list-item {
-    margin-left: 25px;
-    margin-right: 17px;
-    height: 100%;
-    line-height: 105px;
-    transition: all 0.4s;
+    margin-left: 25px;      /* Espacio a la izquierda */
+    margin-right: 17px;     /* Espacio a la derecha */
+    height: 100%;           /* Ocupa el 100% de la altura del contenedor (header) */
+    line-height: 105px;     /* Alinea verticalmente el texto en base a la altura del header */
+    transition: all 0.4s;   /* Suaviza las transiciones al cambiar propiedades, como color o fondo */
 }
 
+/* 
+   Estilo para los enlaces dentro de cada "list-item".
+   Se elimina la subrayado predeterminado y se definen transiciones para el hover.
+*/
 .list-item a {
-    text-decoration: none;
-    color: #475b5a;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
+    text-decoration: none;  /* Elimina la línea subrayada de los enlaces */
+    color: #475b5a;         /* Color del enlace, utilizando el color secundario */
+    width: 100%;            /* Ocupa todo el ancho del elemento padre */
+    height: 100%;           /* Ocupa toda la altura del elemento padre */
+    transition: all 0.4s;   /* Transición suave para efectos de hover */
 }
 
+/* 
+   Efecto hover para los enlaces de la lista.
+   Cambia el color del enlace cuando el usuario pasa el cursor sobre él.
+*/
 .list-item a:hover {
-    color: #ececec;
+    color: #ececec;         /* Cambia el color a un tono claro al hacer hover */
 }
 
+/* 
+   Estilo para la primera sección principal (main_section_one).
+   Se organiza con flexbox para distribuir tres columnas de contenido equitativamente.
+*/
 .main_section_one {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    
+    display: flex;                  /* Se usa flexbox para organizar las columnas */
+    flex-flow: row nowrap;          /* Las columnas se disponen en fila sin romper la línea */
+    justify-content: space-between; /* Espacio igual entre columnas */
+    align-items: center;            /* Centra verticalmente los elementos */
 }
 
+/* 
+   Estilo para cada columna dentro de main_section_one.
+   Se configura para que cada columna tenga un ancho del 33%, con espaciado y estilo de borde.
+*/
 .main_section_col {
-    width: 33%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    margin: 0 5px;
-    gap: 15px;
-    height: 575px;
-    background: #FFF;
-    border: 1px solid #000;
+    width: 33%;                          /* Cada columna ocupa el 33% del ancho disponible */
+    display: flex;                       /* Organiza los elementos internos con flexbox */
+    flex-flow: column wrap;              /* Los elementos se organizan en columna */
+    justify-content: space-evenly;       /* Espacio uniforme entre los elementos internos */
+    text-align: center;                  /* Centra el texto */
+    align-items: center;                 /* Centra horizontalmente los elementos internos */
+    margin: 0 5px;                       /* Pequeño margen horizontal para separar columnas */
+    gap: 15px;                           /* Espacio entre elementos internos */
+    height: 575px;                       /* Altura fija para la columna */
+    background: #FFF;                    /* Fondo blanco para resaltar el contenido */
+    border: 1px solid #000;              /* Borde negro para definir los límites de la columna */
 }
 
+/* 
+   Estilo para las imágenes dentro de cada columna.
+   Se define un tamaño fijo, borde doble y bordes redondeados para un acabado elegante.
+*/
 .main_section_col img {
-    width: 350px;
-    height: 350px;
-    border: 2px double #000;
-    border-radius: 5px;
+    width: 350px;                    /* Ancho fijo para la imagen */
+    height: 350px;                   /* Altura fija para la imagen */
+    border: 2px double #000;         /* Borde doble para destacar la imagen */
+    border-radius: 5px;              /* Bordes redondeados para suavizar el diseño */
 }
 
+/* 
+   Estilo para los encabezados (h2) dentro de cada columna.
+   Se utiliza el color primario para mantener la coherencia visual.
+*/
 .main_section_col h2 {
-    color: #52D1DC;
+    color: #52D1DC;  /* Aplica el color principal a los títulos */
 }
 
+/* 
+   Estilo para la segunda sección principal (main_section_two).
+   Se utiliza flexbox para alinear una imagen y un bloque de frase en fila.
+*/
 .main_section_two {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 525px;
-    background: #475b5a;
+    display: flex;                   /* Organiza los elementos en fila */
+    flex-flow: row nowrap;           /* Los elementos se muestran en una sola línea */
+    justify-content: space-around;   /* Distribuye el espacio de forma equitativa alrededor de los elementos */
+    align-items: center;             /* Centra verticalmente los elementos */
+    height: 525px;                   /* Altura fija para la sección */
+    background: #475b5a;             /* Fondo con color secundario para contraste */
 }
 
+/* 
+   Estilo para el contenedor de la frase en main_section_two.
+   Aumenta el tamaño de la fuente para destacar el mensaje.
+*/
 .main_section_col-phrase {
-    font-size: x-large;
+    font-size: x-large;  /* Fuente grande para resaltar el mensaje */
 }
 
+/* 
+   Estilo para las imágenes dentro de main_section_two.
+   Se mantiene el mismo estilo que en las columnas anteriores para consistencia.
+*/
 .main_section_two img {
-    width: 350px;
-    height: 350px;
-    border: 2px double #000;
-    border-radius: 5px;
+    width: 350px;                    /* Ancho fijo */
+    height: 350px;                   /* Altura fija */
+    border: 2px double #000;         /* Borde doble para destacar la imagen */
+    border-radius: 5px;              /* Bordes redondeados para suavizar el aspecto */
 }
 
+/* 
+   Estilo para la tercera sección principal (main_section_three).
+   Se organiza con flexbox para disponer el contenido informativo y el formulario de suscripción.
+*/
 .main_section_three {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 525px;
-    background: #83bca9;
+    display: flex;                    /* Organiza los elementos en fila */
+    flex-flow: row nowrap;            /* Los elementos se muestran en una sola línea */
+    justify-content: space-between;   /* Espacio uniforme entre los elementos */
+    align-items: center;              /* Centra verticalmente el contenido */
+    height: 525px;                    /* Altura fija para la sección */
+    background: #83bca9;              /* Fondo con el color terciario para diferenciación */
 }
 
+/* 
+   Estilo para la columna "Quiénes somos" en la tercera sección.
+   Similar a las columnas anteriores, con fondo blanco y espaciado adecuado.
+*/
 .main_section_col-about {
-    width: 33%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    margin: 0 5px;
-    gap: 15px;
-    height: 525px;
-    background: #FFF;
+    width: 33%;                          /* Ocupa un tercio del ancho de la sección */
+    display: flex;                       /* Organiza los elementos en columna */
+    flex-flow: column wrap;              /* Permite organizar en columna y ajustar contenido */
+    justify-content: space-evenly;       /* Distribución uniforme del espacio entre elementos */
+    text-align: center;                  /* Centra el texto */
+    align-items: center;                 /* Centra horizontalmente los elementos */
+    margin: 0 5px;                       /* Margen horizontal para separación */
+    gap: 15px;                           /* Espacio entre elementos internos */
+    height: 525px;                       /* Altura fija para la columna */
+    background: #FFF;                    /* Fondo blanco para resaltar el contenido */
 }
 
+/* 
+   Estilo para el formulario dentro de main_section_three.
+   Se usa flexbox para organizar los elementos del formulario de manera vertical.
+*/
 .main_section_three form {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 15px;
+    display: flex;                    /* Organiza los elementos en columna */
+    flex-flow: column wrap;           /* Permite que los elementos se acomoden en columna y se ajusten si es necesario */
+    justify-content: flex-end;        /* Alinea los elementos al final (abajo) */
+    align-items: flex-start;          /* Alinea los elementos al inicio (izquierda) */
+    gap: 15px;                        /* Espacio entre cada elemento del formulario */
 }
 
+/* 
+   Estilo para el contenedor <aside> que agrupa el formulario.
+   Se utiliza flexbox para ubicar el formulario en la parte inferior derecha de la sección.
+*/
 .main_section_three aside {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 15px;
-    margin-left: 125px;
-    margin-right: 45px;
+    display: flex;                    /* Utiliza flexbox para organizar el contenido */
+    flex-flow: column wrap;           /* Organiza en columna y permite ajuste */
+    justify-content: flex-end;        /* Alinea el contenido al fondo del contenedor */
+    align-items: flex-end;            /* Alinea el contenido a la derecha */
+    gap: 15px;                        /* Espacio entre elementos internos */
+    margin-left: 125px;               /* Margen izquierdo para separar del contenido informativo */
+    margin-right: 45px;               /* Margen derecho para balancear el espacio */
 }
 
+/* 
+   Estilo para las etiquetas del formulario.
+   Se define un color para que sean legibles.
+*/
 .main_section_three form label {
-    color: #000;
-
+    color: #000;  /* Color negro para asegurar buena legibilidad */
 }
 
+/* 
+   Estilo para los campos de entrada (input) del formulario.
+   Se define un tamaño fijo, bordes decorativos y un poco de padding para mayor comodidad.
+*/
 .main_section_three form input {
-    width: 300px;
-    height: 40px;
-    border: 2px double #000;
-    border-radius: 5px;
-    padding: 0 10px;
+    width: 300px;                      /* Ancho fijo para los campos de entrada */
+    height: 40px;                      /* Altura fija para mantener consistencia */
+    border: 2px double #000;           /* Borde doble para resaltar el campo */
+    border-radius: 5px;                /* Bordes redondeados para un diseño más suave */
+    padding: 0 10px;                   /* Espacio interno horizontal para evitar que el texto quede pegado al borde */
 }
 
-
+/* 
+   Estilo para el encabezado dentro del formulario.
+   Se utiliza para destacar el título del formulario.
+*/
 .main_section_three form h2 {
-    color: #000;
-
+    color: #000;  /* Color negro para asegurar claridad y contraste */
 }
 
+/* 
+   Estilo para el pie de página (footer).
+   Se utiliza flexbox para organizar el contenido y se aplica el color principal en el fondo.
+*/
 footer {
-    height: 55px;
-    background: #52D1DC;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: start;
-    align-items: flex-start;
+    height: 55px;                        /* Altura fija para el footer */
+    background: #52D1DC;                  /* Fondo con el color primario */
+    display: flex;                       /* Organiza el contenido con flexbox */
+    flex-flow: column wrap;              /* Organiza en columna, permitiendo ajustes si es necesario */
+    justify-content: start;              /* Alinea el contenido al inicio (parte superior) */
+    align-items: flex-start;             /* Alinea el contenido a la izquierda */
 }
 
+/* 
+   Estilo para los párrafos dentro del footer.
+   Se define un tamaño de fuente mayor para facilitar la lectura.
+*/
 footer p {
-    font-size: large;
+    font-size: large;  /* Tamaño de fuente grande para mayor legibilidad */
 }

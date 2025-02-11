@@ -65,7 +65,7 @@
         <!-- Imagen representativa; el atributo alt debería completarse con una descripción para accesibilidad -->
         <h2>Precio competitivo</h2>
         <!-- Encabezado que resalta el concepto principal de esta columna -->
-        <p>
+        <p id="texto01">
           Contamos con excelentes precios competitivos y económicos para aquellos que buscan un buen servicio por un bajo costo
         </p>
         <!-- Párrafo descriptivo que explica el beneficio de precios competitivos -->
@@ -127,19 +127,26 @@
       <!-- Barra lateral (Aside) para el formulario de suscripción -->
       <aside>
         <!-- La etiqueta <aside> se usa para contenido complementario o relacionado, como este formulario -->
-        <form action="">
+        <form action="endpoint" id="formJs">
           <!-- Formulario para que los usuarios se suscriban al newsletter, importante para mantener el contacto con clientes -->
           <h2>Suscríbete a nuestro newsletter!</h2>
           <!-- Título del formulario para captar la atención del usuario -->
           <label for="name">Nombre: </label>
           <!-- La etiqueta <label> mejora la accesibilidad al asociar el texto al campo de entrada -->
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="inputName">
           <!-- Campo de entrada para el nombre del usuario -->
           <label for="email">Email: </label>
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="inputEmail">
           <!-- Campo de entrada para el correo electrónico, importante para envíos de newsletter -->
-          <input type="button" value="Enviar">
+          <input type="submit" value="Enviar" id="inputSubmit">
           <!-- Botón para enviar la información. Posteriormente, se podría modificar para que envíe los datos -->
+
+          <div class="error-block" id="errorBlock">
+            <p>Hubo algun error en los campos, <br />por favor revise e intente nuevamente</p>
+          </div>
+          <div class="sucess-block" id="sucessBlock">
+            <p>Datos enviados correctamente</p>
+          </div>
         </form>
       </aside>
     </section>
@@ -152,6 +159,6 @@
       <p> © Copyright 2018 - 2025</p>
       <p>Todos los derechos reservados</p>
     </footer>
-
+    <script src="js/app.js"></script>
   </body>
 </html>

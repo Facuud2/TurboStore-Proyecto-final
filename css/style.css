@@ -193,7 +193,7 @@ ul {
     flex-flow: row nowrap;            /* Los elementos se muestran en una sola línea */
     justify-content: space-between;   /* Espacio uniforme entre los elementos */
     align-items: center;              /* Centra verticalmente el contenido */
-    height: 525px;                    /* Altura fija para la sección */
+    height: 555px;                    /* Altura fija para la sección */
     background: #83bca9;              /* Fondo con el color terciario para diferenciación */
 }
 
@@ -210,7 +210,7 @@ ul {
     align-items: center;                 /* Centra horizontalmente los elementos */
     margin: 0 5px;                       /* Margen horizontal para separación */
     gap: 15px;                           /* Espacio entre elementos internos */
-    height: 525px;                       /* Altura fija para la columna */
+    height: 100%;                       /* Altura fija para la columna */
     background: #FFF;                    /* Fondo blanco para resaltar el contenido */
 }
 
@@ -221,9 +221,12 @@ ul {
 .main_section_three form {
     display: flex;                    /* Organiza los elementos en columna */
     flex-flow: column wrap;           /* Permite que los elementos se acomoden en columna y se ajusten si es necesario */
-    justify-content: flex-end;        /* Alinea los elementos al final (abajo) */
+    justify-content: flex-start;        /* Alinea los elementos al final (abajo) */
     align-items: flex-start;          /* Alinea los elementos al inicio (izquierda) */
     gap: 15px;                        /* Espacio entre cada elemento del formulario */
+    background: #EDEDED;
+    border-top: 7px solid #28384C;
+    padding: 75px 25px;
 }
 
 /* 
@@ -287,4 +290,24 @@ footer {
 */
 footer p {
     font-size: large;  /* Tamaño de fuente grande para mayor legibilidad */
+}
+
+.error-block {
+   background-color: #ff4c43;
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 35px;
+  border-radius: 5px;
+  display: none;
+  text-align: center;
+}
+
+.sucess-block {
+   background: #10B981;
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 35px;
+  border-radius: 5px;
+  display: none;
+  text-align: center;
 }
